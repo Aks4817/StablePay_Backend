@@ -6,6 +6,10 @@ const app = express();
 require('dotenv').config();
 
 const MONGODB_URL = process.env.MONGODB_URL;
+const cors = require("cors");
+
+
+app.use(cors()); // Allow all origins (for development)
 
 // middleware
 app.use(express.json());
